@@ -18,5 +18,19 @@ var cpuChoice = {
 	text: '',
 };
 
-cpuChoice.init();
-console.log('cpuchoice:', cpuchoice.store, cpuchoice.text);
+// cpuChoice.init();
+// console.log('cpuchoice:', cpuchoice.store, cpuchoice.text);
+
+var order = [0, 1, 2, 0];
+
+var chooseWinner = function(player, cpu) {
+	if(order[player] === order[cpu]) {
+		return 'The game is tied. Try again?';
+	}
+	if(order[player] === order[cpu + 1]) {
+		return "You won!";
+	} else {
+		return "You lost";
+	}
+
+}
