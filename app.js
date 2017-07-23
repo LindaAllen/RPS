@@ -28,8 +28,10 @@ var chooseWinner = function(player, cpu) {
 		return 'The game is tied. Try again?';
 	}
 	if(order[player] === order[cpu + 1]) {
+		score++;
 		return "You won!";
 	} else {
+		score--;
 		return "You lost";
 	}
 
