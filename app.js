@@ -36,3 +36,5 @@ var chooseWinner = function(player, cpu) {
 	}
 
 }
+
+console.log(chooseWinner(1, 0));
