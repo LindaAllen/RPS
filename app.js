@@ -38,3 +38,30 @@ var chooseWinner = function(player, cpu) {
 }
 
 console.log(chooseWinner(1, 0));
+
+// UI
+
+var paragraph = document.querySelector('p');
+
+var assignClick = function(tag, pos) {
+	tag.addEventListener('click', function() {
+playerChoice = pos;
+cpuChoice.init();
+paragraph.innerText = 'The computer chose: ' + cpuChoice.text;
+paragraph.innerText += '/n' chooseWinner(playerChoice, cpuChoice.store);
+paragraph.innerText += '/n' 'SCORE: ' + score;
+
+	})
+
+}
+
+var images = {
+	tags: document.getElementsByTagName('img'),
+	init: function() {
+		for (var step = 0; step < this.tags.length; step++) {
+			assignClick(this.tags[step], step);
+		}
+	}
+}
+
+images.init();
