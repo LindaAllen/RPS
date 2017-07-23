@@ -37,7 +37,7 @@ var chooseWinner = function(player, cpu) {
 
 }
 
-console.log(chooseWinner(1, 0));
+// console.log(chooseWinner(1, 0));
 
 // UI
 
@@ -48,8 +48,8 @@ var assignClick = function(tag, pos) {
 playerChoice = pos;
 cpuChoice.init();
 paragraph.innerText = 'The computer chose: ' + cpuChoice.text;
-paragraph.innerText += '/n' chooseWinner(playerChoice, cpuChoice.store);
-paragraph.innerText += '/n' 'SCORE: ' + score;
+paragraph.innerText += '\n' + chooseWinner(playerChoice, cpuChoice.store);
+paragraph.innerText += '\n' + 'SCORE: ' + score;
 
 	})
 
